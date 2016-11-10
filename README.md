@@ -7,5 +7,8 @@ First time use pyglet, anyhow, done ^ v ^
   - just input letters using keyboard, arrow keys to move and space get a hint.
   - in option, it is EXPERIMENTAL! ^ v ^
   - Hope you enjoy it! and any comment and advice would be great appreciate!
+  
+  
+![screenshot](https://github.com/xinmingzhang/cryptogram/blob/master/screenshot.png)
 
 
