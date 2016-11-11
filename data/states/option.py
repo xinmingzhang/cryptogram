@@ -14,8 +14,7 @@ class Option(scene_manager.Scene):
         self.fullscreen = False
         self.audio = True
         self.init = False
-        self.shake = False
-        self.pos = window.get_location()
+        self.shake = False        
         self.batch = pyglet.graphics.Batch()
 
         self.labels = {}
@@ -64,6 +63,7 @@ class Option(scene_manager.Scene):
                 pyglet.options['audio'] = ('silent')
         elif self.items[self.select_item] == 'SHAKE':
             self.shake = not self.shake
+            self.pos = self.window.get_location()
         elif self.items[self.select_item] == 'INITIALISE':
             self.init = True
             self.save_init()
@@ -123,5 +123,4 @@ class Option(scene_manager.Scene):
         self.draw_text()
         if self.shake:
             self.window.set_location(self.pos[0] + int(random.random()*10),self.pos[1] + int(random.random()*10))
-        elif not self.shake:
-            self.window.set_location(*self.pos)
+
